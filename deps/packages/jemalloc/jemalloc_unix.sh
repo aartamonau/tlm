@@ -8,7 +8,8 @@ CPPFLAGS=-I/usr/local/include ./configure \
     --with-jemalloc-prefix=je_ \
     --disable-cache-oblivious \
     --disable-zone-allocator \
-    --enable-prof || exit 1
+    --enable-prof \
+    --disable-initial-exec-tls || exit 1
 make build_lib_shared && make install_lib_shared install_include install_bin
 
 if [ $(uname -s) = "Darwin" ]; then

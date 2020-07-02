@@ -88,6 +88,7 @@ list(APPEND FOLLY_LIBRARIES
             Boost::system
             Boost::thread
             ${LIBEVENT_LIBRARIES}
-            ${OPENSSL_LIBRARIES})
+            ${OPENSSL_LIBRARIES}
+            /usr/lib/libiberty.a)
 
 mark_as_advanced(FOLLY_INCLUDE_DIR FOLLY_LIBRARIES)
